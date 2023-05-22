@@ -20,38 +20,49 @@
   <body>
     <header class="header">
       <div class="container header-container">
-        <nav class="nav">
-          <a href="./index.html" class="logo-link link"
-            >Web<span class="color-logo">Studio</span></a
-          >
-          <ul class="nav-list list">
-            <li class="nav-list-item">
-              <a href="./index.html" class="nav-link link">Studio</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="./portfolio.html" class="nav-link link active"
-                >Portfolio</a
-              >
-            </li>
-            <li class="nav-list-item">
-              <a href="" class="nav-link link">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="adress-section">
-          <ul class="adress-list list">
-            <li class="adress-list-item">
-              <a href="mailto:info@devstudio.com" class="address-link link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="adress-list-item">
-              <a href="tel:+110001111111" class="address-link link"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <a href="./index.html" class="logo-link link"
+          >Web<span class="color-logo">Studio</span></a
+        >
+        <button
+          class="menu-toggle js-open-menu btn"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-hamburger" width="32px" height="32px">
+            <use href="./images/icons.svg#menu-hamburger"></use>
+          </svg>
+        </button>
+        <div class="nav-container">
+          <nav class="nav">
+            <ul class="nav-list list">
+              <li class="nav-list-item">
+                <a href="./index.html" class="nav-link link">Studio</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="./portfolio.html" class="nav-link link active"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-list-item">
+                <a href="" class="nav-link link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="adress-section">
+            <ul class="adress-list list">
+              <li class="adress-list-item">
+                <a href="mailto:info@devstudio.com" class="address-link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="adress-list-item">
+                <a href="tel:+110001111111" class="address-link link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
     <!-- Main Content -->
@@ -60,7 +71,7 @@
       <section class="project-examples-section section">
         <div class="container examples-container">
           <h1 class="main-portfolio-title hidden-title">Portfolio</h1>
-          <ul class="category-list list">
+          <ul class="category-list list" >
             <li><button class="category-btn btn" type="button">All</button></li>
             <li>
               <button class="category-btn btn" type="button">Web Site</button>
@@ -74,19 +85,38 @@
             </li>
           </ul>
           <!-- examples-list -->
-          <ul class="example-list list">
+          <ul class="example-list list" >
             <!-- example 1 -->
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-1.jpg"
-                    alt="Photo of banking app interface"
-                    class="example-photo"
-                    width="360"
-                    height="300"
-                  />
-
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-01.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-01.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-01.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-01.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-01.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-01.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-01.jpg"
+                      alt="Photo of banking app interface"
+                    />
+                  </picture>
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -103,14 +133,33 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-2.jpg"
-                    alt="Photo of wireless payment"
-                    class="example-photo"
-                    width="360"
-                    height="300"
-                  />
-
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-02.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-02.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-02.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-02.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-02.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-02.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-02.jpg"
+                      alt="Photo of wireless payment"
+                    />
+                  </picture>
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -127,14 +176,33 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-3.jpg"
-                    alt="Photo of meditation app on laptop"
-                    class="example-photo"
-                    width="360"
-                    height="300"
-                  />
-
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-03.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-03.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-03.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-03.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-03.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-03.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-03.jpg"
+                      alt="Photo of meditation app on laptop"
+                    />
+                  </picture>
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -151,14 +219,33 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-4.jpg"
-                    alt="Photo of the car interior"
-                    class="example-photo"
-                    width="360"
-                    height="300"
-                  />
-
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-04.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-04.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-04.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-04.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-04.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-04.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-04.jpg"
+                      alt="Photo of the car interior"
+                    />
+                  </picture>
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -175,13 +262,33 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-5.jpg"
-                    alt="Photo with screen illustrations"
-                    class="example-photo"
-                    width="360"
-                    height="300"
-                  />
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-05.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-05.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-05.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-05.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-05.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-05.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-05.jpg"
+                      alt="Photo with screen illustrations"
+                    />
+                  </picture>
 
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -199,13 +306,33 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-6.jpg"
-                    alt="Photo of women who is listening an online course"
-                    class="example-photo"
-                    width="360"
-                    height="300"
-                  />
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-06.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-06.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-06.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-06.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-06.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-06.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-06.jpg"
+                      alt="Photo of women who is listening an online course"
+                    />
+                  </picture>
 
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -223,14 +350,34 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-7.jpg"
+                <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-07.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-07.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-07.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-07.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-07.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-07.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-07.jpg"
                     alt="Photoes of a Instagram stories"
-                    class="example-photo"
-                    width="360"
-                    height="300"
+                    
                   />
-
+</picture>
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -247,14 +394,34 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-8.jpg"
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-08.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-08.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-08.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-08.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-08.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-08.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-08.jpg"
                     alt="Photo of women with fruits and vegetables"
-                    class="example-photo"
-                    width="360"
-                    height="300"
+                    
                   />
-
+</picture>
                   <p class="overlay-desc">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -271,12 +438,32 @@
             <li class="example-list-item">
               <a href="" class="example-link link">
                 <div class="example-photo-container">
-                  <img
-                    src="./images/project-card-9.jpg"
+                  <picture class="example-photo">
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-mobile/project-cards-1x/project-card-09.jpg 1x,
+                        ./images/project-cards/project-cards-mobile/project-cards-2x/project-card-09.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-tablet/project-cards-1x/project-card-09.jpg 1x,
+                        ./images/project-cards/project-cards-tablet/project-cards-2x/project-card-09.jpg 2x
+                      "
+                      media="(max-width: 1157px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-cards/project-cards-pc/project-cards-1x/project-card-09.jpg 1x,
+                        ./images/project-cards/project-cards-pc/project-cards-2x/project-card-09.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <img
+                      src="./images/project-cards/project-cards-mobile/project-cards-1x/project-card-09.jpg"
                     alt="Photo of a cup of coffee"
-                    class="example-photo"
-                    width="360"
-                    height="300"
+                    
                   />
 
                   <p class="overlay-desc">
@@ -384,5 +571,101 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu btn">
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close-icon"></use>
+        </svg>
+      </button>
+
+      <div class="nav-data-container">
+        <nav class="menu">
+          <ul class="menu-list list">
+            <li class="menu-item">
+              <a href="./index.html" class="menu-link link">Studio</a>
+            </li>
+            <li class="menu-item">
+              <a href="./portfolio.html" class="menu-link link">Portfolio</a>
+            </li>
+            <li class="menu-item">
+              <a href="" class="menu-link link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="menu-adress-section">
+          <ul class="menu-adress-list list">
+            <li class="menu-adress-li">
+              <a
+                href="tel:+110001111111"
+                class="menu-address-link link active-link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="menu-adress-li">
+              <a href="mailto:info@devstudio.com" class="menu-address-link link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
+      <ul class="menu-social-list list">
+        <li class="menu-social-item">
+          <a
+            href=""
+            class="social-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="menu-social-item">
+          <a
+            href=""
+            class="social-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="menu-social-item">
+          <a
+            href=""
+            class="social-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="menu-social-item">
+          <a
+            href=""
+            class="social-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
