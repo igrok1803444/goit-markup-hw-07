@@ -28,6 +28,7 @@
           class="menu-toggle js-open-menu btn"
           aria-expanded="false"
           aria-controls="mobile-menu"
+          type="button"
         >
           <svg class="menu-hamburger" width="32px" height="32px">
             <use href="./images/icons.svg#menu-hamburger"></use>
@@ -271,9 +272,7 @@
             <li class="team-list-item">
               <picture class="employee-photo">
                 <source
-                  srcset="
-                    ./images/team-cards/team-cards-2x/team-card-02-2x.jpg 520w
-                  "
+                  srcset="./images/team-cards/team-cards-2x/team-card-02-2x.jpg"
                   media="(min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx)"
@@ -343,9 +342,7 @@
             <li class="team-list-item">
               <picture class="employee-photo">
                 <source
-                  srcset="
-                    ./images/team-cards/team-cards-2x/team-card-03-2x.jpg 520w
-                  "
+                  srcset="./images/team-cards/team-cards-2x/team-card-03-2x.jpg"
                   media="(min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx)"
@@ -417,16 +414,14 @@
             <li class="team-list-item">
               <picture class="employee-photo">
                 <source
-                  srcset="
-                    ./images/team-cards/team-cards-2x/team-card-04-2x.jpg 520w
-                  "
+                  srcset="./images/team-cards/team-cards-2x/team-card-04-2x.jpg"
                   media="(min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx)"
                 />
 
                 <img
-                  src="./images/team-cards/team-cards-1x/team-card-03.jpg"
+                  src="./images/team-cards/team-cards-1x/team-card-04.jpg"
                   alt="Photo of Daniel Wilson"
                   width="264"
                   height="260"
@@ -755,7 +750,7 @@
       </div>
     </div>
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu btn">
+      <button class="menu-toggle js-close-menu btn" type="button">
         <svg class="close-icon" width="8" height="8">
           <use href="./images/icons.svg#close-icon"></use>
         </svg>
@@ -765,7 +760,7 @@
         <nav class="menu">
           <ul class="menu-list list">
             <li class="menu-item">
-              <a href="./index.html" class="menu-link link">Studio</a>
+              <a href="./index.html" class="menu-link link active">Studio</a>
             </li>
             <li class="menu-item">
               <a href="./portfolio.html" class="menu-link link">Portfolio</a>
@@ -778,9 +773,7 @@
         <address class="menu-adress-section">
           <ul class="menu-adress-list list">
             <li class="menu-adress-li">
-              <a
-                href="tel:+110001111111"
-                class="menu-address-link link active-link"
+              <a href="tel:+110001111111" class="menu-address-link link action"
                 >+11 (000) 111-11-11</a
               >
             </li>

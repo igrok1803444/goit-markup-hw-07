@@ -129,13 +129,18 @@ img {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  margin-right: 76px;
 }
-@media screen and (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) {
   .logo-link {
     margin-right: 120px;
   }
 }
+@media screen and (min-width: 1158px) {
+  .logo-link {
+    margin-right: 76px;
+  }
+}
+
 .color-logo {
   color: var(--navy-blue);
 }
@@ -184,7 +189,7 @@ img {
   color: var(--ocean);
   position: relative;
 }
-.active::after {
+.nav-link.active::after {
   content: '';
   display: block;
   position: absolute;
@@ -237,9 +242,8 @@ img {
   top: 0;
   left: 0;
 
-  padding: 40px;
   padding-top: 80px;
-  padding-right: 0;
+  padding-bottom: 40px;
 
   z-index: var(--modal-zidx);
 
@@ -286,18 +290,29 @@ img {
 
   border: 1px solid rgba(46, 47, 66, 0.1);
 }
+.nav-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 88px);
+
+  margin: 0 auto;
+  margin-bottom: 48px;
+
+  padding-left: 40px;
+}
 .menu {
+  /* margin-bottom: 284px; */
 }
 .menu-list {
-  margin-bottom: 284px;
 }
 .menu-item:not(:last-child) {
   margin-bottom: 40px;
 }
 
-.menu-item:last-child > .menu-link {
+/* .menu-item:last-child > .menu-link {
   color: var(--ocean);
-}
+} */
 .menu-link {
   font-size: 36px;
   line-height: 1.11;
@@ -307,9 +322,10 @@ img {
 
   color: var(--navy-blue);
 }
-
+.menu-link.active {
+  color: var(--ocean);
+}
 .menu-adress-section {
-  margin-bottom: 48px;
 }
 .menu-adress-list {
 }
@@ -324,7 +340,7 @@ img {
 
   color: var(--slate);
 }
-.menu-adress-li:first-child > .menu-address-link {
+.menu-address-link.action {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -333,11 +349,12 @@ img {
 
   color: var(--iris);
 }
+@media screen and (max-width: 392px) {
+  .menu-address-link.action {
+    font-size: 24px;
+  }
+}
 .menu-social-list {
-  position: absolute;
-  left: 0;
-  bottom: 40px;
-
   width: 100%;
 
   display: flex;
@@ -939,7 +956,8 @@ img {
   top: 50%;
   left: 50%;
 
-  width: 392px;
+  max-width: 392px;
+  width: 100%;
 
   padding-top: 72px;
   padding-left: 24px;
